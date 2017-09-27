@@ -1,0 +1,127 @@
+body, html {
+height: 100%;
+font: 15px/1.5 Arial, Helvetica, sans-serif;
+padding:0;F
+margin:0;
+
+}
+
+
+  .container{
+    width: 100%;
+    margin: auto;
+    overflow:hidden;
+    margin-top: 30px;
+	border:0;
+  }
+
+  ul{
+  margin:0;
+  padding:0;
+
+}
+
+  /*Header **/
+  header{
+	height:200px;
+    width: 100%;
+    background:#169bd5;
+    color:white;
+    overflow:hidden;
+    position:fixed;
+    z-index: 1;
+
+  }
+
+  header a{
+	outline: none;
+    color:white;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size: 20px;
+
+  }
+
+  header li{
+    float:left;
+    display:inline;
+    padding: 0 20px 0 20px;
+    color:  #169bd5;
+	outline:0;
+
+  }
+
+  header #logga{
+	  height:100px;
+    padding-left: 80px;
+    width: 100%;
+
+
+  }
+
+  header nav{
+    float:right;
+    margin-top:center;
+	  outline: none;
+
+      }
+
+      /*video*/
+
+	  .showcase{
+
+		  padding-bottom:40px;
+		  background-color:white;
+	  }
+
+
+
+	  .Tjänster{
+        width: 100%;
+        margin: auto;
+        background:#169bd5;
+        padding-top:15em;
+        padding-bottom:15em;
+
+		font-family:Arial;
+		float:left;
+		color: white;
+}
+
+  /*tjnster iconer ink text*/
+    #film{
+
+      padding-left:15%;
+		  float:left;
+	  }
+
+
+			#h3{
+
+		  padding-left:15%;
+		  float:left;
+	  }
+			#h4{
+		  padding-left:15%;
+      float: left;
+    }
+
+	  .contact{
+	  color:#169bd5;
+	  text-align:center;
+	  padding-top:75em;
+	  padding-bottom:10em;
+	  background-color:ffffff
+  }
+  /*kontakt med hyperlink img och text */
+		#contact{
+	    outline: none;
+	    border-style:none;
+	   }
+
+  /*avslutning design logga copyrights och mejl */
+	footer{
+	background-color:#D7D7D7;
+	text-align:center;
+	padding-bottom:10px;
+	}

@@ -1,0 +1,139 @@
+<!-- Det här är en demoversion av en hemsida för ett fiktivt företag speciliserat på drönartjäsnter,
+ Bestå av en Html fil byggd med bootstrap för responsiv hemsida, och en CSS style sida.
+innehåller:
+loopande videofil
+Anchor links
+jquery script för smoothscrolling script,
+  -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="./css/css.css"/>
+
+	<title>Drone Pilots | Welcome </title>
+
+		<!--CDN Bootstrap -->
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+	<header>
+			<!--Top/Navigering -->
+		<div class="container">
+			<div id="branding">
+
+				</div>
+						<div id="logga">
+							<a href="#showcase">    <!-- img responsiv convertera bilder i sklande skärm-->
+						<img class="img-responsive" src="./image/drone-s.png">
+					</a>
+						</div>
+					 <nav>
+						<ul>
+							<li><a href="#service">Tjänster</a><li>
+							<li><a href="#contact">Kontakt</a></li>
+					</ul>
+					</nav>
+		</div>
+	</header>
+
+		<!--demo video mp4 -->
+	<showcase>
+	<section id="showcase"> <a name="show"> </a>
+		<div class="showcase">
+		</showcase>
+		<video autoplay loop id="video-background" muted plays-inline video width="100%" height="100%" >
+  <source class="img-responsive" src="./image/web-film.mp4" type="video/mp4">
+	</video>
+		</div>
+
+		<section id="service">
+			<div class="Tjänster"> <a name="service"> </a>
+
+				<div id="film">
+				  <img class="img-responsive" src="./image/film1.png" >
+
+						<h1>  Filmproduktion </h1>
+				</div>
+				<div id="h3">
+					<img class="img-responsive" src="./image/mark.png" >
+				<h1>  Markbesiktning</h1>
+				</div>
+				<div id="h4">
+					<img class="img-responsive" src="./image/hus.png">
+
+				<h1> Husbesiktning</h1>
+
+				</div>
+				</section>
+
+	<div class="contact" >
+		<section id="contact"> <a name="contact"> </a>
+		<h1>Är du intresserad av våra tjänster eller vill veta mer? <br>
+				Kontakta oss på mejl, vi svarar inom 1-2 arbetsdagar.</h1>
+			<a href="mailto:knutssondavid94.com"> <img  src="./image/mejl.png" border="0"> </a>
+			</section>
+		</div>
+
+			<!--Slut -->
+			<footer> <a name="Footer"> </a>
+				<img src="./image/mad.s.png">  <P> Copyright &copy; </P>
+				<p> knutssondavid94@gmail.com </p>
+			</footer>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+// smoothscrolling   en JQ-script för mjukare scrollning
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+	</script>
+
+	<script
+
+</body>
+</html>
